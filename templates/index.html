@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>Barky App</h1>
+
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>
+                <a href="/add">Add</a>
+            </td>
+            <td>Add a bookmark</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/listdate">List Date</a>
+                <td>List bookmarks by date</td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/listtitle">List Title</a>
+                <td>List bookmarks by title</td>
+            </td>
+        </tr>
+    </table>
+
+    
+</div>
+{% endblock %}
