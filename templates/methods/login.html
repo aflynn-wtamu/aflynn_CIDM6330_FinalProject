@@ -8,20 +8,20 @@
 
 {% block body %}
 <div class="content">
-    <h1>Create a Ticket</h1>
+    <h1>Login</h1>
 
     <form method="POST">
       <table>
         <tr>
-          <td>Title:</td>
-          <td><input type="text" name="title" id="title"></td>
+          <td>Username:</td>
+          <td><input type="text" name="user" id="user"></td>
         </tr>
         <tr>
-          <td>Description:</td>
-          <td><input type="text" name="description" id="notes"></td>
+          <td>Password:</td>
+          <td><input type="text" name="password" id="password"></td>
         </tr>
       </table>
-      <input type="submit" value="Create Ticket">
+      <input type="submit" value="Login">
     </form>
 
     <form action="/" method="CLOSE">

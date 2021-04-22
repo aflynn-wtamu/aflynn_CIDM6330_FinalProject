@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>Create User</h1>
+
+    <form method="POST">
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="user" id="user"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="text" name="password" id="password"></td>
+        </tr>
+        <tr>
+          <td>First Name:</td>
+          <td><input type="text" name="firstName" id="firstName"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" name="lastName" id="lastName"></td>
+        </tr>
+        <tr>
+          <td>Position Title:</td>
+          <td><input type="text" name="positionTitle" id="positionTitle"></td>
+        </tr>
+        <tr>
+          <td>Speciality:</td>
+          <td><input type="text" name="positionSpeciality" id="positionSpeciality"></td>
+        </tr>
+      </table>
+      <input type="submit" value="Create Login">
+    </form>
+
+    <form action="/" method="CLOSE">
+      <input type="submit" value="Back">
+    </form>
+    
+</div>
+{% endblock %}

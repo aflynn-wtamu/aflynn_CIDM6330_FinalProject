@@ -1,41 +1,58 @@
-# Barky 
+# Support Ticket App 
 
-Barky is inspired by Dane Hillard's Bark example of an application that demonstrates some basic software engineering principles such as:
+# Application Setup
 
-* Separation of concerns
-* Loose Coupling
-* Inheritance
-* Extensibility
-* Abstraction
-* Refactoring
+Please use the following steps to setup the application:
 
-This repository is an extension of Dane's example to also include testing.
+* **Setup the Virtual Environment**
+    * Open a command terminal using **bash**
+    * Create the virtual environment and **install flask**
+        ``` bash
+        # create venv folder and virtual environment
+        py -m venv venv
 
-# Layered Architecture
+        # activate virtual environment
+        . venv/Scripts/activate
 
-At a basic level, the architecture is designed with a layered strategy to include the following common/typical elements:
+        # install Flask
+        pip install Flask
 
-* **Presentation Layer** (will be a module called barky.py here)
-* **Business Logic Layer** (will be a module called commands.py here)
-* **Presistence Layer** (will be a module called database.py here)
+        # install python and activate .env file
+        pip install python-dotenv
+        ```
 
-# Bare Bones Approach
 
-## Persistence
-We will take a bare bones approach and connect directly to a sqlite database.
+# Run Application
 
-The [DB Browser for SQLite](https://sqlitebrowser.org/) tool will be useful to inspect the data and manage the database file.
+Please use the following steps to run the application:
 
-The initial database wil consist of a table called `bookmarks`:
+* **Open Terminal and Run app.py**
+    * Open a command terminal using **bash**
+    * Run app.py using python
+        ``` bash
+        py app.py
+        ```
 
-``` sql
-CREATE TABLE IF NOT EXISTS bookmarks
-(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    url TEXT NOT NULL,
-    notes TEXT,
-    date_added TEXT NOT NULL
-);
-```
+# Run Tests
 
+Please use the following steps to test the application:
+
+* **Open Terminal and Run Test Commands**
+    * Open a command terminal using **bash**
+    * Activate the **virtual environment**
+        ``` bash
+        . venv/Scripts/activate
+        ```
+    * Run unittest commands using python
+        ``` bash
+        # Database Tests
+        py -m unittest -v test_app_db.TicketDatabaseTestCase
+        py -m unittest -v test_app_db.UserDatabaseTestCase
+
+        # Commands Test
+        py -m unittest -v test_app_commands.TicketCommandsTestCase
+        py -m unittest -v test_app_commands.UserCommandsTestCase
+
+        # Interface Test
+        py -m unittest -v test_app.TicketInterfaceTestCase
+        ```

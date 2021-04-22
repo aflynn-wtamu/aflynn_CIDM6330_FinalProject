@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>Update Ticket</h1>
+
+    <form action="/update/{{ticket.id}}" method="POST">
+        <table>
+          <tr>
+            <td>Status:</td>
+            <td><input type="text" name="status" id="status" value="{{ticket.ticket_status}}"></td>
+          </tr>
+          <tr>
+            <td>Title:</td>
+            <td><input type="text" name="title" id="title" value="{{ticket.ticket_title}}" disabled></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td><input type="text" name="description" id="description" value="{{ticket.ticket_description}}" disabled></td>
+          </tr>
+          <tr>
+            <td>Notes:</td>
+            <td><input type="text" name="note" id="note" value="{{ticket.update_note}}"></td>
+          </tr>
+        </table>
+        <input type="submit" value="Update Ticket">
+      </form>
+  
+      <form action="/adminindex" method="CLOSE">
+        <input type="submit" value="Back">
+      </form>
+</div>
+{% endblock %}
